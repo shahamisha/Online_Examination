@@ -1,0 +1,56 @@
+<?php 
+require_once ('process/dbh.php');
+$sql = "SELECT f_id, fname,lname,email,gender,dob,address,mobile_no,main_subject FROM faculty_master";
+$result = mysqli_query($conn, $sql);
+?>
+
+
+<html>
+<head>
+	<title>Admin Panel | Online Exam System</title>
+	<link rel="stylesheet" type="text/css" href="stylealogin.css">
+</head>
+<body>
+	
+	<header>
+		<nav>
+			<h1>Online Exam System</h1>
+			<ul id="navli">
+				<li><a class="homered" href="aloginwel.php">HOME</a></li>
+				<li><a class="homeblack" href="faculty.php">Faculty</a></li>
+				<li><a class="homeblack" href="students.php">Users</a></li>
+				<li><a class="homeblack" href="#">Reports</a></li>				
+				<li><a class="homeblack" href="alogin.php">Log Out</a></li>
+			</ul>
+		</nav>
+	</header>
+
+<div class="divider"></div>
+	<div id="divimg">
+		<h2 style="font-family: 'Montserrat', sans-serif; font-size: 25px; text-align: center;">Faculty Detail </h2>
+    	<table>
+
+			<tr bgcolor="#000">
+				<th align = "center">Id</th>
+				<th align = "center">Name</th>
+				<th align = "center">Email</th>
+				<th align = "center">Gender</th>
+				<th align = "center">Date Of Birth</th>
+				<th align = "center">Address</th>
+				<th align = "center">Mobile No</th>
+				<th align = "center">Subject</th>
+				
+				
+
+			</tr>
+
+			
+
+		
+
+		</table>
+
+				
+	</div>
+</body>
+</html>
